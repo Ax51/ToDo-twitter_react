@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    max-width: 1200px;
+    min-width: 600px;
+}
+.new-post-label {
+    width: 800px;
+}
