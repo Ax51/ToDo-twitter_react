@@ -1,6 +1,7 @@
 import React from 'react';
+import './post-list-item.css';
 
-const PostListStatus = () => {
+const PostListItem = () => {
     return (
         <li className="app-list-item d-flex justify-content-between">
             <span className="app-list-item-label">
@@ -18,4 +19,4 @@ const PostListStatus = () => {
         </li>
     )
 }
-export default PostListStatus;
+export default PostListItem;

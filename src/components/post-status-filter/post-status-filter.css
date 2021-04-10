@@ -1,0 +1,15 @@
+.btn {
+    border: 1px solid black;
+}
+
+.btn-show-all {
+background-color:rgb(59, 59, 145);
+color: cornsilk;
+box-shadow: .2rem .2rem .2rem rgb(56, 56, 56);
+}
+
+.btn-show-liked {
+    background-color:cornsilk;
+    color: rgb(59, 59, 145);
+    box-shadow: .2rem .2rem .2rem rgb(56, 56, 56);
+}

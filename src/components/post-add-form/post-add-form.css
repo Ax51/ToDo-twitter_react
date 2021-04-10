@@ -1,0 +1,19 @@
+.new-post-label {
+  width: auto;
+  flex-grow: 1;
+  margin-top: 3px;
+}
+
+.post-add-form {
+  margin-top: 20px;
+
+  display: flex;
+}
+
+.btn-outline-secondary {
+  background-color:cornsilk;
+  color: rgb(59, 59, 145);
+  margin-top: 3px;
+  margin-left: 3px;
+  box-shadow: .2rem .2rem .2rem rgb(56, 56, 56);
+}
