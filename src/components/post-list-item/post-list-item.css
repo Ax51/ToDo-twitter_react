@@ -6,7 +6,7 @@
   background-color: #fff;
   border: 1px solid gray;
   border-radius: 1rem;
-  box-shadow: .3rem .3rem .3rem rgb(56, 56, 56);
+  box-shadow: .3rem .3rem .3rem rgba(56, 56, 56, 0.5);
 }
 
 .app-list-item button {

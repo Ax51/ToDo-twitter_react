@@ -15,5 +15,5 @@
   color: rgb(59, 59, 145);
   margin-top: 3px;
   margin-left: 3px;
-  box-shadow: .2rem .2rem .2rem rgb(56, 56, 56);
+  box-shadow: .2rem .2rem .2rem rgba(56, 56, 56, 0.5);
 }

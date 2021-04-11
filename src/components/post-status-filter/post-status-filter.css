@@ -5,11 +5,11 @@
 .btn-show-all {
 background-color:rgb(59, 59, 145);
 color: cornsilk;
-box-shadow: .2rem .2rem .2rem rgb(56, 56, 56);
+box-shadow: .2rem .2rem .2rem rgba(56, 56, 56, 0.5);
 }
 
 .btn-show-liked {
     background-color:cornsilk;
     color: rgb(59, 59, 145);
-    box-shadow: .2rem .2rem .2rem rgb(56, 56, 56);
+    box-shadow: .2rem .2rem .2rem rgba(56, 56, 56, 0.5);
 }
