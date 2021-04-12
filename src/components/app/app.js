@@ -10,10 +10,10 @@ export default class App extends Component {
         super(props);
         this.state = {
             data: [
-                {label: "Going to learn react", important: true, like: false, id:54},
-                {label: "Keep trying", important: false, like: false, id:45},
-                {label: "Going on", important: false, like: false, id:67},
-                {label: "true", important: true, like: false, id:87}
+                {label: "Going to learn react", important: true, like: false, id: 54},
+                {label: "Keep trying", important: false, like: false, id: 45},
+                {label: "Going on", important: false, like: false, id: 67},
+                {label: "true", important: true, like: false, id: 87}
             ]
         }
     }
@@ -32,6 +32,7 @@ export default class App extends Component {
         const newPost = {
             label: inp,
             important: false,
+            like: false,
             id: Date.now()
         };
         this.setState(({data}) => {    
@@ -42,18 +43,40 @@ export default class App extends Component {
         })
     }
 
-    toggleImportant = (id) => {
-        console.log(id);
+       toggleImportant = (id) => {
+        this.setState(({data}) => {
+            const index = data.findIndex(elem => elem.id === id);
+            const old = data[index];
+            const importanted = {...old, important: !old.important};
+            const newArr = [...data.slice(0, index), importanted, ...data.slice(index + 1)];
+            return {
+            data: newArr
+            }
+        })
     }
 
     toggleLike = (id) => {
-        console.log(id);
+        this.setState(({data}) => {
+            const index = data.findIndex(elem => elem.id === id);
+            const old = data[index];
+            const liked = {...old, like: !old.like};
+            const newArr = [...data.slice(0, index), liked, ...data.slice(index + 1)];
+            return {
+            data: newArr
+            }
+        })
     }
 
     render() {
+        const liked = this.state.data.filter(item => item.like).length;
+        const important = this.state.data.filter(item => item.important).length;
+        const allPosts = this.state.data.length;
         return (
             <div className = "app">
-                <AppHeader totalPosts = {this.state.data.length}/>
+                <AppHeader 
+                liked = {liked}
+                important = {important}
+                totalPosts = {allPosts}/>
                 <div className = "search-panel d-flex">
                     <SearchPanel/>
                     <PostStatusFilter/>

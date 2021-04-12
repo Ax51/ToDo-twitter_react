@@ -1,13 +1,11 @@
 import React from 'react';
 import './app-header.css';
 
-const AppHeader = (totalCount) => {
-
-    const count = totalCount.totalPosts;
+const AppHeader = ({liked, important, totalPosts}) => {
     let prom;
-    if (count === 1) {
+    if (totalPosts === 1) {
         prom = 'запись';
-    } else if (count > 1 && count < 5) {
+    } else if (totalPosts > 1 && totalPosts < 5) {
         prom = 'записи';
     } else
         prom = 'записей';
@@ -15,7 +13,7 @@ const AppHeader = (totalCount) => {
     return (
         <div className="app-header d-flex">
             <h1>Alex Polyakov</h1>
-            <h2>{count} {prom}, из них понравилось 0</h2>
+            <h2>{totalPosts} {prom}, из них понравилось {liked}, отмечено как важно {important}</h2>
         </div>
     )
 }

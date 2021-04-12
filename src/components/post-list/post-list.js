@@ -5,13 +5,15 @@ import './post-list.css';
 const PostList = ({posts, onDelete, onToggleImportant, onToggleLike}) => {
 
     const elements = posts.map((item) => {
-        item.important = item.important || false;
-        const {id, label, important} = item;
+        let {id, label, important, like} = item;
+        important = important || false;
+        like = like || false;
         return (
             <li key = {id} className='list-group-item'>
                 <PostListItem
                 label = {label}
                 important = {important}
+                like ={like}
                 onDelete = {(() => onDelete(id))}
                 onToggleImportant = {(() => onToggleImportant(id))}
                 onToggleLike = {(() => onToggleLike(id))}/>
