@@ -4,4 +4,11 @@
 .app-list .list-group-item {
   padding: 20px 35px 10px 35px;
   margin-top: 10px;
+  margin: 0.3rem 0;
+  padding-left: 0.8rem;
+  align-content: center;
+  background-color: #fff;
+  border: 1px solid gray;
+  border-radius: 1rem;
+  box-shadow: .3rem .3rem .3rem rgba(56, 56, 56, 0.5);
 }
